@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct HosPerfApp: App {
+    @StateObject var archive: Archive = Archive()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ResultView(archive: archive)
         }
     }
 }
