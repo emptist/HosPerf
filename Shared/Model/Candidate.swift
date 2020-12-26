@@ -12,10 +12,11 @@ import Foundation
 struct Candidate: Identifiable {
     var id = UUID()
     var 单位名称: String
-    var 历次考核: [Exam]
-//    var 年度: Int
-//    var 权重: Float
-//    var 评分: Float
+    var 考核: Exam
+    var 年度: Int {
+        考核.年度
+    }
+
     
 }
 

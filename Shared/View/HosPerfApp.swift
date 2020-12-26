@@ -13,7 +13,8 @@ struct HosPerfApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ResultView(archive: archive)
+             ContentView(archive: archive)
+            //ResultView(archive: archive)
         }
     }
 }

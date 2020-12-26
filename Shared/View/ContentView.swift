@@ -8,18 +8,47 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var archive: Archive
+
+    var body: some View {
+        
+        NavigationView {
+            // A list of Students
+            CandidateList(archive: archive)
+            
+            // this is for iPad and MacOS
+            Text("Please Add Some Students")
+                .font(.largeTitle)
+        }
+
+//        VStack {
+//            Text("\(archive.candidates[0].单位名称)")
+//                .font(.largeTitle)
+//                .fontWeight(.bold)
+//                .foregroundColor(Color.orange)
+//                .multilineTextAlignment(.center)
+//                .shadow(radius: 10)
+//            ResultView(archive: archive)
+//        }
+    }
+}
+
+struct CandidateList: View {
+    @ObservedObject var archive: Archive
     
     var body: some View {
-
-        VStack {
-            Text("nothing")
-            //ResultView(archive: archive)
+        List {
+            ForEach(archive.candidates) {
+                Text("\($0.单位名称)")
+            }
         }
     }
+    
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(archive: Archive())
     }
 }
