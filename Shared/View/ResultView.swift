@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct ResultView: View {
-    @ObservedObject var archive: Archive
+    //@Binding
+    var candidate: Candidate
     var complete = true
     var body: some View {
         let tableHeads = ["指标名称","指标导向","17年","18年","19年","权重","评分"]
@@ -23,24 +24,25 @@ struct ResultView: View {
             
             ScrollView {
                 LazyVGrid(columns: columns) {
-                    ForEach(archive.candidates[0].考核.指标集) { indicator in
+                    ForEach(candidate.考核.指标集) { indicator in
                         Text("\(indicator.指标名称)")
                         Text("\(indicator.指标导向)")
-                        Text("\(indicator.近年值[0])")
-                        Text("\(indicator.近年值[1])")
-                        Text("\(indicator.近年值[2])")
+                        Text("\(indicator.rawDataB1)")
+                        Text("\(indicator.rawDataB2)")
+                        Text("\(indicator.rawDataB3)")
                         Text("\(indicator.权重)")
                         Text("\(indicator.评分)")
                     }
                 }.font(.title)
             }
         }
+        .navigationTitle(candidate.单位名称)
     }
 }
 
 struct TableView_Previews: PreviewProvider {
     static var previews: some View {
-        ResultView(archive:Archive())
+        ResultView(candidate:Archive().candidates[0])
     }
 }
 

@@ -27,6 +27,8 @@
 		487C62D025971B010015239C /* Exam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487C62CE25971B010015239C /* Exam.swift */; };
 		487C62D425971B6A0015239C /* Archive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487C62D325971B6A0015239C /* Archive.swift */; };
 		487C62D525971B6A0015239C /* Archive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487C62D325971B6A0015239C /* Archive.swift */; };
+		48D556CD259753B5000B0C1E /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D556CC259753B5000B0C1E /* DetailView.swift */; };
+		48D556CE259753B5000B0C1E /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D556CC259753B5000B0C1E /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,7 @@
 		487C62C9259717D50015239C /* Candidate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Candidate.swift; sourceTree = "<group>"; };
 		487C62CE25971B010015239C /* Exam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exam.swift; sourceTree = "<group>"; };
 		487C62D325971B6A0015239C /* Archive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Archive.swift; sourceTree = "<group>"; };
+		48D556CC259753B5000B0C1E /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +141,7 @@
 				482C600525964B1A0039A441 /* HosPerfApp.swift */,
 				487C62BA2596F9170015239C /* EditView.swift */,
 				487C62BF2596F9680015239C /* InputView.swift */,
+				48D556CC259753B5000B0C1E /* DetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -242,6 +246,7 @@
 				487C62CF25971B010015239C /* Exam.swift in Sources */,
 				482C601A25964B1C0039A441 /* ContentView.swift in Sources */,
 				487C62C5259715810015239C /* Indicator.swift in Sources */,
+				48D556CD259753B5000B0C1E /* DetailView.swift in Sources */,
 				482C60352596E7330039A441 /* ResultView.swift in Sources */,
 				487C62C02596F9680015239C /* InputView.swift in Sources */,
 				487C62D425971B6A0015239C /* Archive.swift in Sources */,
@@ -258,6 +263,7 @@
 				487C62D025971B010015239C /* Exam.swift in Sources */,
 				482C601B25964B1C0039A441 /* ContentView.swift in Sources */,
 				487C62C6259715810015239C /* Indicator.swift in Sources */,
+				48D556CE259753B5000B0C1E /* DetailView.swift in Sources */,
 				482C60362596E7330039A441 /* ResultView.swift in Sources */,
 				487C62C12596F9680015239C /* InputView.swift in Sources */,
 				487C62D525971B6A0015239C /* Archive.swift in Sources */,
