@@ -38,11 +38,11 @@ struct CandidateList: View {
     
     var body: some View {
         List {
-            ForEach(archive.candidates) { ca in
+            ForEach(0..<archive.candidates.count, id:\.self) { idx in
                 NavigationLink(
-                    destination: DetailView(candidate: ca),
+                    destination: DetailView(candidate: $archive.candidates[idx]),
                     label: {
-                        Text("\(ca.单位名称)")
+                        Text("\(archive.candidates[idx].单位名称)")
                     })
             
             }

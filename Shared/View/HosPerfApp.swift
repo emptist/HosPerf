@@ -18,3 +18,9 @@ struct HosPerfApp: App {
         }
     }
 }
+
+var numberFormatter: NumberFormatter {
+    let f = NumberFormatter()
+    f.numberStyle = .decimal
+    return f
+}

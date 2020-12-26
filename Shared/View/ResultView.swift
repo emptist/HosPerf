@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct ResultView: View {
-    //@Binding
-    var candidate: Candidate
-    var complete = true
+    @Binding var candidate: Candidate
+    
     var body: some View {
         let tableHeads = ["指标名称","指标导向","17年","18年","19年","权重","评分"]
         let columns: [GridItem] =
@@ -19,7 +18,7 @@ struct ResultView: View {
             LazyVGrid(columns: columns) {
                 ForEach(tableHeads, id: \.self) { Text($0) }
             }
-            .font(.largeTitle)
+            .font(.title)
             .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
             
             ScrollView {
@@ -33,17 +32,17 @@ struct ResultView: View {
                         Text("\(indicator.权重)")
                         Text("\(indicator.评分)")
                     }
-                }.font(.title)
+                }.font(.body)
             }
         }
         .navigationTitle(candidate.单位名称)
     }
 }
 
-struct TableView_Previews: PreviewProvider {
-    static var previews: some View {
-        ResultView(candidate:Archive().candidates[0])
-    }
-}
+//struct ResultView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ResultView(candidate:Archive().candidates[0])
+//    }
+//}
 
 
