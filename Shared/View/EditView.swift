@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// 对指标系统加以设置
 struct EditView: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)

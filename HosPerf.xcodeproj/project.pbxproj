@@ -33,6 +33,8 @@
 		48D556D325977F7C000B0C1E /* LabeledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D556D125977F7C000B0C1E /* LabeledTextField.swift */; };
 		48D556D825978128000B0C1E /* DecimalFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D556D725978128000B0C1E /* DecimalFormatter.swift */; };
 		48D556D925978128000B0C1E /* DecimalFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D556D725978128000B0C1E /* DecimalFormatter.swift */; };
+		48D556E72597EB12000B0C1E /* CandidatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D556E62597EB12000B0C1E /* CandidatesView.swift */; };
+		48D556E82597EB12000B0C1E /* CandidatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D556E62597EB12000B0C1E /* CandidatesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,7 @@
 		48D556CC259753B5000B0C1E /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		48D556D125977F7C000B0C1E /* LabeledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledTextField.swift; sourceTree = "<group>"; };
 		48D556D725978128000B0C1E /* DecimalFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalFormatter.swift; sourceTree = "<group>"; };
+		48D556E62597EB12000B0C1E /* CandidatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidatesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,13 +146,14 @@
 		482C602A259654DA0039A441 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				482C600525964B1A0039A441 /* HosPerfApp.swift */,
 				487C62BF2596F9680015239C /* InputView.swift */,
 				482C60342596E7330039A441 /* ResultView.swift */,
 				482C600625964B1A0039A441 /* ContentView.swift */,
-				482C600525964B1A0039A441 /* HosPerfApp.swift */,
 				487C62BA2596F9170015239C /* EditView.swift */,
 				48D556CC259753B5000B0C1E /* DetailView.swift */,
 				48D556D125977F7C000B0C1E /* LabeledTextField.swift */,
+				48D556E62597EB12000B0C1E /* CandidatesView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -264,6 +268,7 @@
 				487C62C5259715810015239C /* Indicator.swift in Sources */,
 				48D556CD259753B5000B0C1E /* DetailView.swift in Sources */,
 				482C60352596E7330039A441 /* ResultView.swift in Sources */,
+				48D556E72597EB12000B0C1E /* CandidatesView.swift in Sources */,
 				487C62C02596F9680015239C /* InputView.swift in Sources */,
 				487C62D425971B6A0015239C /* Archive.swift in Sources */,
 				487C62CA259717D50015239C /* Candidate.swift in Sources */,
@@ -283,6 +288,7 @@
 				487C62C6259715810015239C /* Indicator.swift in Sources */,
 				48D556CE259753B5000B0C1E /* DetailView.swift in Sources */,
 				482C60362596E7330039A441 /* ResultView.swift in Sources */,
+				48D556E82597EB12000B0C1E /* CandidatesView.swift in Sources */,
 				487C62C12596F9680015239C /* InputView.swift in Sources */,
 				487C62D525971B6A0015239C /* Archive.swift in Sources */,
 				487C62CB259717D50015239C /* Candidate.swift in Sources */,

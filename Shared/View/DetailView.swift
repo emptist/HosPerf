@@ -9,23 +9,17 @@ import SwiftUI
 
 struct DetailView: View {
     @Binding var candidate: Candidate
-    @State var editMode = true
+    @Binding var inputMode: Bool //= true
     
     var body: some View {
-        VStack {
-            withAnimation() {
-                Toggle(isOn: $editMode) {
-                    Text("editMode")
-                }
-            }
             
-            if editMode {
+            if inputMode {
                 InputView(candidate: $candidate)
             } else {
                 ResultView(candidate: $candidate)
                 
             }
-        }
+        
     }
     
 }

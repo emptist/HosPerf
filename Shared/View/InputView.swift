@@ -9,7 +9,7 @@ import SwiftUI
 
 struct InputView: View {
     @Binding var candidate: Candidate
-    var complete: Bool = true
+    //var complete: Bool = true
     var body: some View {
         let tableHeads = ["指标名称","17年","18年","19年"]
         let columns: [GridItem] =

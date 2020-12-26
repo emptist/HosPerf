@@ -8,13 +8,14 @@
 import SwiftUI
 
 class Archive: ObservableObject {
-    @Published var candidates: [Candidate] = [
-        中山一,
-        广中医
-    ]
+    @Published var candidates: [Candidate] //
+    
+    init(_ candidates: [Candidate] = []) {
+        self.candidates = candidates
+    }
 }
 
-var anArchive = Archive()
+
 
 var 指标集 = [
     Indicator(指标名称: "收支结余", rawDataB1:233, rawDataB2: 3335,rawDataB3: 3388, 权重: 0.3, 评分: 77),
@@ -33,3 +34,7 @@ var 指标集2 = [
 var exam2 = Exam(考核名称:"三级中医医院绩效考核", 指标集: 指标集2, 年度: 2019)
 var 广中医 = Candidate(单位名称: "广中医", 考核: exam2)
 
+var testArchive = Archive([
+    中山一,
+    广中医
+])

@@ -9,12 +9,12 @@ import SwiftUI
 
 @main
 struct HosPerfApp: App {
-    @StateObject var archive: Archive = Archive()
+    @StateObject var archive: Archive = testArchive
     
     var body: some Scene {
         WindowGroup {
-             ContentView(archive: archive)
-            //ResultView(archive: archive)
+            //ContentView() //(archive: archive)
+            CandidatesView(archive: archive)
         }
     }
 }
