@@ -39,7 +39,7 @@ struct CandidateList: View {
             
             List {
                 ForEach(0..<archive.candidates.count, id:\.self) { idx in
-                    ItemCell(archive: archive, idx: idx, imputMode: $inputMode)
+                    ItemCellOnNaviBar(archive: archive, idx: idx, imputMode: $inputMode)
                 }
             }
             .navigationTitle("考核对象")
@@ -50,7 +50,7 @@ struct CandidateList: View {
 
 
 
-struct ItemCell: View {
+struct ItemCellOnNaviBar: View {
     @ObservedObject var archive: Archive
     var idx: Int
     @Binding var imputMode: Bool //= true

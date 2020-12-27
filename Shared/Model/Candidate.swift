@@ -7,7 +7,7 @@
 
 import Foundation
 
-//单位名称:中山一
+//单位名称:妇科
 
 struct Candidate: Identifiable {
     var id = UUID()

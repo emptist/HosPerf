@@ -23,7 +23,7 @@ var 指标集 = [
     Indicator(指标名称: "门诊患者满意度", rawDataB1:63, rawDataB2: 55,rawDataB3: 38, 权重: 0.3, 评分: 79),
 ]
 var exam = Exam(考核名称:"三级综合医院绩效考核", 指标集: 指标集, 年度: 2019)
-var 中山一 = Candidate(单位名称: "中山一", 考核: exam)
+var 妇科 = Candidate(单位名称: "妇科", 考核: exam)
 
 
 var 指标集2 = [
@@ -32,9 +32,9 @@ var 指标集2 = [
     Indicator(指标名称: "门诊患者满意度", rawDataB1:63, rawDataB2: 57,rawDataB3: 78, 权重: 0.3, 评分: 29),
 ]
 var exam2 = Exam(考核名称:"三级中医医院绩效考核", 指标集: 指标集2, 年度: 2019)
-var 广中医 = Candidate(单位名称: "广中医", 考核: exam2)
+var 儿科 = Candidate(单位名称: "儿科", 考核: exam2)
 
 var testArchive = Archive([
-    中山一,
-    广中医
+    妇科,
+    儿科
 ])
