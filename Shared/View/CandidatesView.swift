@@ -41,8 +41,39 @@ struct CandidateList: View {
                 ForEach(0..<archive.candidates.count, id:\.self) { idx in
                     ItemCellOnNaviBar(archive: archive, idx: idx, imputMode: $inputMode)
                 }
+                .onMove(perform: moveItem)
+                .onDelete(perform: deleteItem)
             }
             .navigationTitle("考核对象")
+            .toolbar {
+                HStack {
+                    #if os(iOS)
+                    EditButton()
+                    #endif
+                    Button("Add", action: makeItem)
+                    //Spacer()
+                }
+            }
+
+        }
+    }
+    
+    func makeItem() -> Void {
+        withAnimation {
+            archive.candidates.append(Candidate(单位名称: "", 考核: Exam(考核名称: "", 指标集: [], 年度: 0)))
+            //print(archive.students)
+        }
+    }
+    
+    func moveItem(from oldIndex:IndexSet, to newIndex:Int) -> Void {
+        withAnimation {
+            archive.candidates.move(fromOffsets: oldIndex, toOffset: newIndex)
+        }
+    }
+    
+    func deleteItem(offsets:IndexSet) -> Void {
+        withAnimation {
+            archive.candidates.remove(atOffsets: offsets)
         }
     }
 }
