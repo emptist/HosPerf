@@ -9,12 +9,14 @@ import Foundation
 //import SwiftUI
 
 
-protocol Initiable {
+protocol InitIdentifiable: Identifiable {
+    var itemName: String {get set}
     init(_ itemName: String)
 }
 
 protocol AddMoveDeletable {
-    associatedtype ItemType: Initiable
+    associatedtype ItemType: InitIdentifiable
+    
     var items: Array<ItemType> {get set}
     func makeItem(_ itemName: String) -> Void
     func moveItem(from oldIndex:IndexSet, to newIndex:Int) -> Void

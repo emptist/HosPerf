@@ -7,22 +7,19 @@
 
 import Foundation
 
-//考核名称:三级综合医院绩效考核
+//itemName:三级综合医院绩效考核
 //指标集:55个考核指标的集合
 
-struct Exam: Identifiable, Initiable {
+struct Exam: InitIdentifiable {
     init(_ itemName: String) {
-        考核名称 = itemName
+        self.itemName = itemName
         
     }
     
     var id = UUID()
-    var 考核名称: String
+    var itemName: String
     var 指标集:[Indicator] = 各项指标
-    var 年度: Int {
-        Calendar.current.component(.year, from: Date())
-    }
-    
+
     var 评分: Float {
         var result: Float = 0
         for each in 指标集 {

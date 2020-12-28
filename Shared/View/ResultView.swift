@@ -11,7 +11,7 @@ struct ResultView: View {
     @Binding var candidate: Candidate
     
     var body: some View {
-        let tableHeads = ["指标名称","指标导向","17年","18年","19年","权重","评分"]
+        let tableHeads = ["指标名称","指标导向","\(candidate.yb3)年","\(candidate.yb2)年","\(candidate.yb1)年","权重","评分"]
         let columns: [GridItem] =
             Array(repeating: .init(.flexible()), count:tableHeads.count)
         VStack {
@@ -24,7 +24,7 @@ struct ResultView: View {
             ScrollView {
                 LazyVGrid(columns: columns) {
                     ForEach(candidate.考核.指标集) { indicator in
-                        Text("\(indicator.指标名称)")
+                        Text("\(indicator.itemName)")
                         Text("\(indicator.指标导向)")
                         Text("\(indicator.rawDataB1)")
                         Text("\(indicator.rawDataB2)")
@@ -35,7 +35,7 @@ struct ResultView: View {
                 }.font(.body)
             }
         }
-        .navigationTitle(candidate.单位名称)
+        .navigationTitle(candidate.itemName)
     }
 }
 

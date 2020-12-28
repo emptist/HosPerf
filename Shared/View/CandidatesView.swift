@@ -90,7 +90,7 @@ struct ItemCellOnNaviBar: View {
         NavigationLink(
             destination: DetailView(candidate: $archive.items[idx], inputMode: $imputMode),
             label: {
-                Text("\(archive.items[idx].单位名称)")
+                Text("\(archive.items[idx].itemName)")
             })
     }
 }

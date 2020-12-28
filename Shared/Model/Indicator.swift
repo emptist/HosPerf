@@ -8,16 +8,16 @@
 import Foundation
 
 
-//指标名称:平均住院率
+//itemName:平均住院率
 //近年值:历次年度历次指标的值
 
-struct Indicator: Identifiable, Initiable {
+struct Indicator: InitIdentifiable {
     init(_ itemName: String) {
-        self.指标名称 = itemName
+        self.itemName = itemName
     }
     
     var id = UUID()
-    var 指标名称: String
+    var itemName: String
     var 指标导向: String = "逐步提高"
 //    var 年度: Int
     //var 近年值: [Float]
