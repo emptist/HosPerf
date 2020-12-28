@@ -35,6 +35,8 @@
 		48D556D925978128000B0C1E /* DecimalFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D556D725978128000B0C1E /* DecimalFormatter.swift */; };
 		48D556E72597EB12000B0C1E /* CandidatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D556E62597EB12000B0C1E /* CandidatesView.swift */; };
 		48D556E82597EB12000B0C1E /* CandidatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D556E62597EB12000B0C1E /* CandidatesView.swift */; };
+		48D556EE259A8599000B0C1E /* AddMoveRemovable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D556ED259A8599000B0C1E /* AddMoveRemovable.swift */; };
+		48D556EF259A8599000B0C1E /* AddMoveRemovable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D556ED259A8599000B0C1E /* AddMoveRemovable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,7 @@
 		48D556D125977F7C000B0C1E /* LabeledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledTextField.swift; sourceTree = "<group>"; };
 		48D556D725978128000B0C1E /* DecimalFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalFormatter.swift; sourceTree = "<group>"; };
 		48D556E62597EB12000B0C1E /* CandidatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidatesView.swift; sourceTree = "<group>"; };
+		48D556ED259A8599000B0C1E /* AddMoveRemovable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMoveRemovable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				487C62D325971B6A0015239C /* Archive.swift */,
+				48D556ED259A8599000B0C1E /* AddMoveRemovable.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -265,6 +269,7 @@
 			files = (
 				487C62CF25971B010015239C /* Exam.swift in Sources */,
 				482C601A25964B1C0039A441 /* ContentView.swift in Sources */,
+				48D556EE259A8599000B0C1E /* AddMoveRemovable.swift in Sources */,
 				487C62C5259715810015239C /* Indicator.swift in Sources */,
 				48D556CD259753B5000B0C1E /* DetailView.swift in Sources */,
 				482C60352596E7330039A441 /* ResultView.swift in Sources */,
@@ -285,6 +290,7 @@
 			files = (
 				487C62D025971B010015239C /* Exam.swift in Sources */,
 				482C601B25964B1C0039A441 /* ContentView.swift in Sources */,
+				48D556EF259A8599000B0C1E /* AddMoveRemovable.swift in Sources */,
 				487C62C6259715810015239C /* Indicator.swift in Sources */,
 				48D556CE259753B5000B0C1E /* DetailView.swift in Sources */,
 				482C60362596E7330039A441 /* ResultView.swift in Sources */,

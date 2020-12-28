@@ -26,7 +26,7 @@ struct DetailView: View {
 
 //struct DetailView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        DetailView(candidate: Archive().candidates[0])
+//        DetailView(candidate: Archive().items[0])
 //    }
 //}
 

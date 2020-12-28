@@ -39,6 +39,6 @@ struct InputView: View {
 
 //struct InputView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        InputView(candidate:Archive().candidates[0])
+//        InputView(candidate:Archive().items[0])
 //    }
 //}

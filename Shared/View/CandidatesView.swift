@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CandidatesView: View {
-    @ObservedObject var archive: Archive
+    @ObservedObject var archive: Archive<Candidate>
     @State var inputMode = true
     
     var body: some View {
@@ -26,19 +26,20 @@ struct CandidatesView: View {
 
 
 struct CandidateList: View {
-    @ObservedObject var archive: Archive
+    @ObservedObject var archive: Archive<Candidate>
     @Binding var inputMode: Bool //= true
+    @State var itemName: String = ""
     
     var body: some View {
         VStack {
-            withAnimation() {
-                Toggle(isOn: $inputMode) {
-                    Text("editMode")
-                }
-            }
+//            withAnimation() {
+//                Toggle(isOn: $inputMode) {
+//                    Text("editMode")
+//                }
+//            }
             
             List {
-                ForEach(0..<archive.candidates.count, id:\.self) { idx in
+                ForEach(0..<archive.items.count, id:\.self) { idx in
                     ItemCellOnNaviBar(archive: archive, idx: idx, imputMode: $inputMode)
                 }
                 .onMove(perform: moveItem)
@@ -50,6 +51,7 @@ struct CandidateList: View {
                     #if os(iOS)
                     EditButton()
                     #endif
+                    TextField("条目名称", text: $itemName)
                     Button("Add", action: makeItem)
                     //Spacer()
                 }
@@ -60,20 +62,19 @@ struct CandidateList: View {
     
     func makeItem() -> Void {
         withAnimation {
-            archive.candidates.append(Candidate(单位名称: "", 考核: Exam(考核名称: "", 指标集: [], 年度: 0)))
-            //print(archive.students)
+            archive.makeItem(itemName)
         }
     }
     
     func moveItem(from oldIndex:IndexSet, to newIndex:Int) -> Void {
         withAnimation {
-            archive.candidates.move(fromOffsets: oldIndex, toOffset: newIndex)
+            archive.moveItem(from: oldIndex, to: newIndex)
         }
     }
     
     func deleteItem(offsets:IndexSet) -> Void {
         withAnimation {
-            archive.candidates.remove(atOffsets: offsets)
+            archive.deleteItem(offsets: offsets)
         }
     }
 }
@@ -82,14 +83,14 @@ struct CandidateList: View {
 
 
 struct ItemCellOnNaviBar: View {
-    @ObservedObject var archive: Archive
+    @ObservedObject var archive: Archive<Candidate>
     var idx: Int
     @Binding var imputMode: Bool //= true
     var body: some View {
         NavigationLink(
-            destination: DetailView(candidate: $archive.candidates[idx], inputMode: $imputMode),
+            destination: DetailView(candidate: $archive.items[idx], inputMode: $imputMode),
             label: {
-                Text("\(archive.candidates[idx].单位名称)")
+                Text("\(archive.items[idx].单位名称)")
             })
     }
 }
