@@ -11,8 +11,8 @@ import SwiftUI
 class Archive<ItemType: InitIdentifiable>: ObservableObject, AddMoveDeletable {
     @Published var items: Array<ItemType>
     
-    init(_ candidates: Array<ItemType> = []) {
-        self.items = candidates
+    init(_ items: Array<ItemType> = []) {
+        self.items = items
     }
 }
 
