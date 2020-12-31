@@ -14,27 +14,7 @@ class Archive<ItemType: InitIdentifiable>: ObservableObject, AddMoveDeletable {
     init(_ candidates: Array<ItemType> = []) {
         self.items = candidates
     }
-    
-    func makeItem(_ itemName: String) -> Void {
-        withAnimation {
-            items.append(ItemType(itemName))
-        }
-    }
-
-    func moveItem(from oldIndex:IndexSet, to newIndex:Int) -> Void {
-        withAnimation {
-            items.move(fromOffsets: oldIndex, toOffset: newIndex)
-        }
-    }
-    
-    func deleteItem(offsets:IndexSet) -> Void {
-        withAnimation {
-            items.remove(atOffsets: offsets)
-        }
-    }
 }
-
-
 
 
 

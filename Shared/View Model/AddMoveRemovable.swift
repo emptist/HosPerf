@@ -6,7 +6,6 @@
 //
 
 import Foundation
-//import SwiftUI
 
 
 protocol InitIdentifiable: Identifiable {
@@ -14,7 +13,10 @@ protocol InitIdentifiable: Identifiable {
     init(_ itemName: String)
 }
 
-protocol AddMoveDeletable {
+
+// AnyObject represents all classes;
+// when missing we need to add mutating in front of func definition in following extension
+protocol AddMoveDeletable: AnyObject {
     associatedtype ItemType: InitIdentifiable
     
     var items: Array<ItemType> {get set}
@@ -23,18 +25,31 @@ protocol AddMoveDeletable {
     
     func deleteItem(offsets:IndexSet) -> Void
     
+    subscript(index: Int) -> ItemType { set get }
 }
 
 extension AddMoveDeletable {
-    mutating func makeItem(_ itemName: String) -> Void {
+    //mutating
+    func makeItem(_ itemName: String) -> Void {
         items.append(ItemType(itemName))
     }
     
-    mutating func moveItem(from oldIndex:IndexSet, to newIndex:Int) -> Void {
+    //mutating
+    func moveItem(from oldIndex:IndexSet, to newIndex:Int) -> Void {
         items.move(fromOffsets: oldIndex, toOffset: newIndex)
     }
     
-    mutating func deleteItem(offsets:IndexSet) -> Void {
+    //mutating
+    func deleteItem(offsets:IndexSet) -> Void {
         items.remove(atOffsets: offsets)
+    }
+    
+    subscript(index: Int) -> ItemType {
+        get {
+            items[index]
+        }
+        set {
+            items[index] = newValue
+        }
     }
 }

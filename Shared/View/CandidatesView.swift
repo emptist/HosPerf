@@ -88,9 +88,9 @@ struct ItemCellOnNaviBar: View {
     @Binding var imputMode: Bool //= true
     var body: some View {
         NavigationLink(
-            destination: DetailView(candidate: $archive.items[idx], inputMode: $imputMode),
+            destination: DetailView(candidate: $archive[idx], inputMode: $imputMode),
             label: {
-                Text("\(archive.items[idx].itemName)")
+                Text("\(archive[idx].itemName)")
             })
     }
 }
