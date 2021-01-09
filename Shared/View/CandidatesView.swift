@@ -39,7 +39,7 @@ struct CandidateList: View {
 //            }
             
             List {
-                ForEach(0..<archive.items.count, id:\.self) { idx in
+                ForEach(0..<archive.arrayOfItems.count, id:\.self) { idx in
                     ItemCellOnNaviBar(archive: archive, idx: idx, imputMode: $inputMode)
                 }
                 .onMove(perform: moveItem)

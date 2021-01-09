@@ -41,7 +41,7 @@ struct ResultView: View {
 
 //struct ResultView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        ResultView(candidate:Archive().items[0])
+//        ResultView(candidate:Archive().arrayOfItems[0])
 //    }
 //}
 

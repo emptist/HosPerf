@@ -10,7 +10,7 @@ import Foundation
 //itemName:三级综合医院绩效考核
 //指标集:55个考核指标的集合
 
-struct Exam: InitIdentifiable {
+struct Exam: IdInitiatable {
     init(_ itemName: String) {
         self.itemName = itemName
         

@@ -10,7 +10,7 @@ import Foundation
 //itemName:妇科
 var examName = "绩效考核"
 
-struct Candidate: InitIdentifiable {
+struct Candidate: IdInitiatable {
     init(_ itemName: String) {
         self.itemName = itemName
         考核 = Exam(examName)

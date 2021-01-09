@@ -11,7 +11,7 @@ import Foundation
 //itemName:平均住院率
 //近年值:历次年度历次指标的值
 
-struct Indicator: InitIdentifiable {
+struct Indicator: IdInitiatable {
     init(_ itemName: String) {
         self.itemName = itemName
     }

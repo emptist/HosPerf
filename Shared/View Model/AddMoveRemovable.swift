@@ -8,18 +8,32 @@
 import Foundation
 
 
-protocol InitIdentifiable: Identifiable {
+protocol Initiatable {
     var itemName: String {get set}
     init(_ itemName: String)
 }
 
+protocol IdInitiatable: Initiatable, Identifiable {
+    
+}
+
+//protocol InitIdEquatable: Equatable, IdInitiatable {
+//
+//}
+//
+//extension InitIdEquatable {
+//    static func == (lbs:Self,rbs:Self) -> Bool {
+//        lbs.itemName == rbs.itemName
+//    }
+//}
 
 // AnyObject represents all classes;
 // when missing we need to add mutating in front of func definition in following extension
 protocol AddMoveDeletable: AnyObject {
-    associatedtype ItemType: InitIdentifiable
+    associatedtype ItemType: IdInitiatable
     
-    var items: Array<ItemType> {get set}
+    //var items: Set<ItemType> {get set}
+    var arrayOfItems: Array<ItemType> {get set}
     func makeItem(_ itemName: String) -> Void
     func moveItem(from oldIndex:IndexSet, to newIndex:Int) -> Void
     
@@ -29,27 +43,30 @@ protocol AddMoveDeletable: AnyObject {
 }
 
 extension AddMoveDeletable {
+    //this won't work
+    //typealias ItemType = InitIdentifiable
+    
     //mutating
     func makeItem(_ itemName: String) -> Void {
-        items.append(ItemType(itemName))
+        arrayOfItems.append(ItemType(itemName))
     }
     
     //mutating
     func moveItem(from oldIndex:IndexSet, to newIndex:Int) -> Void {
-        items.move(fromOffsets: oldIndex, toOffset: newIndex)
+        arrayOfItems.move(fromOffsets: oldIndex, toOffset: newIndex)
     }
     
     //mutating
     func deleteItem(offsets:IndexSet) -> Void {
-        items.remove(atOffsets: offsets)
+        arrayOfItems.remove(atOffsets: offsets)
     }
     
     subscript(index: Int) -> ItemType {
         get {
-            items[index]
+            arrayOfItems[index]
         }
         set {
-            items[index] = newValue
+            arrayOfItems[index] = newValue
         }
     }
 }

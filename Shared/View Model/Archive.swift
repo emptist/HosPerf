@@ -8,11 +8,11 @@
 import SwiftUI
 
 
-class Archive<ItemType: InitIdentifiable>: ObservableObject, AddMoveDeletable {
-    @Published var items: Array<ItemType>
+class Archive<ItemType: IdInitiatable>: ObservableObject, AddMoveDeletable {
+    @Published var arrayOfItems: Array<ItemType>
     
     init(_ items: Array<ItemType> = []) {
-        self.items = items
+        self.arrayOfItems = items
     }
 }
 
