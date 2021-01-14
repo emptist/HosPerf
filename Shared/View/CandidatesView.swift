@@ -32,11 +32,11 @@ struct CandidateList: View {
     
     var body: some View {
         VStack {
-//            withAnimation() {
-//                Toggle(isOn: $inputMode) {
-//                    Text("editMode")
-//                }
-//            }
+            withAnimation() {
+                Toggle(isOn: $inputMode) {
+                    Text("editMode")
+                }
+            }
             
             List {
                 ForEach(0..<archive.arrayOfItems.count, id:\.self) { idx in

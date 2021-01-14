@@ -93,10 +93,10 @@
 		482C600425964B1A0039A441 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				48D556D6259780A7000B0C1E /* Extenstions */,
 				482C602A259654DA0039A441 /* View */,
 				482C6029259654C50039A441 /* View Model */,
 				482C6028259654B40039A441 /* Model */,
+				48D556D6259780A7000B0C1E /* Extenstions */,
 				482C600725964B1C0039A441 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -151,12 +151,11 @@
 			isa = PBXGroup;
 			children = (
 				482C600525964B1A0039A441 /* HosPerfApp.swift */,
+				48D556CC259753B5000B0C1E /* DetailView.swift */,
 				487C62BF2596F9680015239C /* InputView.swift */,
 				482C60342596E7330039A441 /* ResultView.swift */,
 				482C600625964B1A0039A441 /* ContentView.swift */,
 				487C62BA2596F9170015239C /* EditView.swift */,
-				48D556CC259753B5000B0C1E /* DetailView.swift */,
-				48D556D125977F7C000B0C1E /* LabeledTextField.swift */,
 				48D556E62597EB12000B0C1E /* CandidatesView.swift */,
 			);
 			path = View;
@@ -166,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				48D556D725978128000B0C1E /* DecimalFormatter.swift */,
+				48D556D125977F7C000B0C1E /* LabeledTextField.swift */,
 			);
 			path = Extenstions;
 			sourceTree = "<group>";

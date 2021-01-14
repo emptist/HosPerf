@@ -24,6 +24,6 @@ struct Indicator: IdInitiatable {
     var rawDataB1: Float!
     var rawDataB2: Float!
     var rawDataB3: Float!
-    var 权重: Float!
-    var 评分: Float!
+    var 权重: Float! = 0.5
+    var 评分: Float! = 0
 }

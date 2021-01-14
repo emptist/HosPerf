@@ -17,15 +17,6 @@ protocol IdInitiatable: Initiatable, Identifiable {
     
 }
 
-//protocol InitIdEquatable: Equatable, IdInitiatable {
-//
-//}
-//
-//extension InitIdEquatable {
-//    static func == (lbs:Self,rbs:Self) -> Bool {
-//        lbs.itemName == rbs.itemName
-//    }
-//}
 
 // AnyObject represents all classes;
 // when missing we need to add mutating in front of func definition in following extension
@@ -39,7 +30,7 @@ protocol AddMoveDeletable: AnyObject {
     
     func deleteItem(offsets:IndexSet) -> Void
     
-    subscript(index: Int) -> ItemType { set get }
+    subscript(index: Int) -> ItemType {set get}
 }
 
 extension AddMoveDeletable {

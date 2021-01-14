@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DetailView: View {
     @Binding var candidate: Candidate
-    @Binding var inputMode: Bool //= true
+    @Binding var inputMode: Bool
     
     var body: some View {
             
