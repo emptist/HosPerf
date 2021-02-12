@@ -21,9 +21,9 @@ struct Indicator: IdInitiatable {
     var 指标导向: String = "逐步提高"
 //    var 年度: Int
     //var 近年值: [Float]
-    var rawDataB1: Float!
-    var rawDataB2: Float!
-    var rawDataB3: Float!
+    var rawDataB1: Float! = 20
+    var rawDataB2: Float! = 20
+    var rawDataB3: Float! = 20
     var 权重: Float! = 0.5
     var 评分: Float! = 0
 }
