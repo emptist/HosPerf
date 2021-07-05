@@ -1,5 +1,5 @@
 //
-//  Indicator.swift
+//  HMAIndicator.swift
 //  HosPerf
 //
 //  Created by jk on 2020/12/26.
@@ -11,7 +11,7 @@ import Foundation
 //itemName:平均住院率
 //近年值:历次年度历次指标的值
 
-struct Indicator: IdInitiatable {
+struct HMAIndicator: IdInitiatable {
     init(_ itemName: String) {
         self.itemName = itemName
     }

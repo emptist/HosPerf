@@ -23,11 +23,11 @@ struct InputView: View {
             
             ScrollView {
                 LazyVGrid(columns: columns) {
-                    ForEach(0..<candidate.考核.指标集.count, id:\.self) { idx in
-                        Text("\(candidate.考核.指标集[idx].itemName)")
-                        TextField(candidate.考核.指标集[idx].itemName, value: $candidate.考核.指标集[idx].rawDataB1, formatter: numberFormatter)
-                        TextField(candidate.考核.指标集[idx].itemName, value: $candidate.考核.指标集[idx].rawDataB2, formatter: numberFormatter)
-                        TextField(candidate.考核.指标集[idx].itemName, value: $candidate.考核.指标集[idx].rawDataB3, formatter: numberFormatter)
+                    ForEach(0..<candidate.考核.IndicatorsGroup.count, id:\.self) { idx in
+                        Text("\(candidate.考核.IndicatorsGroup[idx].itemName)")
+                        TextField(candidate.考核.IndicatorsGroup[idx].itemName, value: $candidate.考核.IndicatorsGroup[idx].rawDataB1, formatter: numberFormatter)
+                        TextField(candidate.考核.IndicatorsGroup[idx].itemName, value: $candidate.考核.IndicatorsGroup[idx].rawDataB2, formatter: numberFormatter)
+                        TextField(candidate.考核.IndicatorsGroup[idx].itemName, value: $candidate.考核.IndicatorsGroup[idx].rawDataB3, formatter: numberFormatter)
                         
                     }
                 }.font(.body)

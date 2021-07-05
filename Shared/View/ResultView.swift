@@ -26,7 +26,7 @@ struct ResultView: View {
             
             ScrollView {
                 LazyVGrid(columns: columns) {
-                    ForEach(candidate.考核.指标集) { indicator in
+                    ForEach(candidate.考核.IndicatorsGroup) { indicator in
                         Text("\(indicator.itemName)")
                         Text("\(indicator.指标导向)")
                         Text("\(indicator.rawDataB1)")

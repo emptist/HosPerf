@@ -13,11 +13,11 @@ var examName = "绩效考核"
 struct Candidate: IdInitiatable {
     init(_ itemName: String) {
         self.itemName = itemName
-        考核 = Exam(examName)
+        考核 = Assessment(examName)
     }
     var id = UUID()
     var itemName: String
-    var 考核: Exam
+    var 考核: Assessment
 }
 
 

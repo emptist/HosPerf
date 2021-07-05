@@ -19,12 +19,12 @@
 		487C62BC2596F9170015239C /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487C62BA2596F9170015239C /* EditView.swift */; };
 		487C62C02596F9680015239C /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487C62BF2596F9680015239C /* InputView.swift */; };
 		487C62C12596F9680015239C /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487C62BF2596F9680015239C /* InputView.swift */; };
-		487C62C5259715810015239C /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487C62C4259715810015239C /* Indicator.swift */; };
-		487C62C6259715810015239C /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487C62C4259715810015239C /* Indicator.swift */; };
+		487C62C5259715810015239C /* HMAIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487C62C4259715810015239C /* HMAIndicator.swift */; };
+		487C62C6259715810015239C /* HMAIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487C62C4259715810015239C /* HMAIndicator.swift */; };
 		487C62CA259717D50015239C /* Candidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487C62C9259717D50015239C /* Candidate.swift */; };
 		487C62CB259717D50015239C /* Candidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487C62C9259717D50015239C /* Candidate.swift */; };
-		487C62CF25971B010015239C /* Exam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487C62CE25971B010015239C /* Exam.swift */; };
-		487C62D025971B010015239C /* Exam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487C62CE25971B010015239C /* Exam.swift */; };
+		487C62CF25971B010015239C /* Assessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487C62CE25971B010015239C /* Assessment.swift */; };
+		487C62D025971B010015239C /* Assessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487C62CE25971B010015239C /* Assessment.swift */; };
 		487C62D425971B6A0015239C /* Archive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487C62D325971B6A0015239C /* Archive.swift */; };
 		487C62D525971B6A0015239C /* Archive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487C62D325971B6A0015239C /* Archive.swift */; };
 		48D556CD259753B5000B0C1E /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D556CC259753B5000B0C1E /* DetailView.swift */; };
@@ -51,9 +51,9 @@
 		482C60342596E7330039A441 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		487C62BA2596F9170015239C /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		487C62BF2596F9680015239C /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
-		487C62C4259715810015239C /* Indicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indicator.swift; sourceTree = "<group>"; };
+		487C62C4259715810015239C /* HMAIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMAIndicator.swift; sourceTree = "<group>"; };
 		487C62C9259717D50015239C /* Candidate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Candidate.swift; sourceTree = "<group>"; };
-		487C62CE25971B010015239C /* Exam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exam.swift; sourceTree = "<group>"; };
+		487C62CE25971B010015239C /* Assessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assessment.swift; sourceTree = "<group>"; };
 		487C62D325971B6A0015239C /* Archive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Archive.swift; sourceTree = "<group>"; };
 		48D556CC259753B5000B0C1E /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		48D556D125977F7C000B0C1E /* LabeledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledTextField.swift; sourceTree = "<group>"; };
@@ -131,9 +131,9 @@
 		482C6028259654B40039A441 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				487C62C4259715810015239C /* Indicator.swift */,
+				487C62C4259715810015239C /* HMAIndicator.swift */,
 				487C62C9259717D50015239C /* Candidate.swift */,
-				487C62CE25971B010015239C /* Exam.swift */,
+				487C62CE25971B010015239C /* Assessment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -267,10 +267,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				487C62CF25971B010015239C /* Exam.swift in Sources */,
+				487C62CF25971B010015239C /* Assessment.swift in Sources */,
 				482C601A25964B1C0039A441 /* ContentView.swift in Sources */,
 				48D556EE259A8599000B0C1E /* AddMoveRemovable.swift in Sources */,
-				487C62C5259715810015239C /* Indicator.swift in Sources */,
+				487C62C5259715810015239C /* HMAIndicator.swift in Sources */,
 				48D556CD259753B5000B0C1E /* DetailView.swift in Sources */,
 				482C60352596E7330039A441 /* ResultView.swift in Sources */,
 				48D556E72597EB12000B0C1E /* CandidatesView.swift in Sources */,
@@ -288,10 +288,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				487C62D025971B010015239C /* Exam.swift in Sources */,
+				487C62D025971B010015239C /* Assessment.swift in Sources */,
 				482C601B25964B1C0039A441 /* ContentView.swift in Sources */,
 				48D556EF259A8599000B0C1E /* AddMoveRemovable.swift in Sources */,
-				487C62C6259715810015239C /* Indicator.swift in Sources */,
+				487C62C6259715810015239C /* HMAIndicator.swift in Sources */,
 				48D556CE259753B5000B0C1E /* DetailView.swift in Sources */,
 				482C60362596E7330039A441 /* ResultView.swift in Sources */,
 				48D556E82597EB12000B0C1E /* CandidatesView.swift in Sources */,

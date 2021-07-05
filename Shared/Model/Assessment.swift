@@ -1,5 +1,5 @@
 //
-//  Exam.swift
+//  Assessment.swift
 //  HosPerf
 //
 //  Created by jk on 2020/12/26.
@@ -8,9 +8,9 @@
 import Foundation
 
 //itemName:三级综合医院绩效考核
-//指标集:55个考核指标的集合
+//IndicatorsGroup:56个考核指标的集合
 
-struct Exam: IdInitiatable {
+struct Assessment: IdInitiatable {
     init(_ itemName: String) {
         self.itemName = itemName
         
@@ -18,11 +18,11 @@ struct Exam: IdInitiatable {
     
     var id = UUID()
     var itemName: String
-    var 指标集:[Indicator] = 各项指标
+    var IndicatorsGroup:[HMAIndicator] = ExampleIndicatorGroup
 
     var 评分: Float {
         var result: Float = 0
-        for each in 指标集 {
+        for each in IndicatorsGroup {
             result += each.评分
         }
         return result
@@ -30,9 +30,9 @@ struct Exam: IdInitiatable {
     
 }
 
-var 各项指标 = [
-    Indicator("收支结余"),
-    Indicator("医务人员满意度"),
-    Indicator("门诊患者满意度"),
+var ExampleIndicatorGroup = [
+    HMAIndicator("收支结余"),
+    HMAIndicator("医务人员满意度"),
+    HMAIndicator("门诊患者满意度"),
 ]
 
